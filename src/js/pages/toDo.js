@@ -8,6 +8,8 @@ import toDoCardList from "../components/cards/toDoCard";
 import { getStore } from "../redux/store";
 import toDoItem from "../components/cards/toDoItems";
 import { Router } from "../routes/router";
+import header from "../components/ui/header";
+import tagLine from "../components/ui/tagline";
 
 const toDoPage = function () {
   const page = document.createElement("div");
@@ -21,34 +23,12 @@ const toDoPage = function () {
     console.log(e.currentTarget.parentElement.dataset.key);
   }
 
-  // info for edit
-  function onEditTodo(e) {
-    const toDoObject = toDoList.find((emp) => emp.id === toDoId);
-  }
+  const pageHeader = document.createElement("header");
+  pageHeader.classList.add("page-header"); // add class to page header
+  pageHeader.appendChild(makeElement(logo()));
+  pageHeader.append(makeElement(tagLine("Get it all Done !", "tagline")));
 
-  // ------html template-------
-  let headerTemplate = `<header class="page-not-found center-in-page">
-  <h1>The To Do List</h1>
-  <p>Keeping it organized</p>
-  </header>`;
-  const pageHeader = makeElement(headerTemplate);
-  // const homeLink = link("todo list", "/home");
-
-  // pageHeader.append(homeLink);
   page.append(pageHeader);
-  pageHeader.prepend(makeElement(logo()));
-
-  const removeButton = button("Remove Item");
-  page.append(directory());
-  page.append(removeButton);
-
-  // -----remove button functionality-----
-  removeButton.addEventListener("click", function (e) {
-    const action = { type: "edit" };
-    const payload = { id: 1 };
-    const temp = reducers({ action, payload });
-    console.log(temp);
-  });
 
   // ------Data------
   const toDoList = getStore();

@@ -1,15 +1,28 @@
-import tagLine from "../ui/tagline";
-import header from "../ui/header";
+import makeElement from "../../../utils/makeElement";
 
-const pageHeader = document.createElement("header");
 
-pageHeader.classList.add("page-header"); // add class to page header
-pageHeader.appendChild(makeElement(logo()));
 
-pageHeader.append(makeElement(tagLine("Get it all Done !", "tagline")));
+const pageHeader = function ({ label, tagline, children }) {
+  
+  const template = `
+    <header class="${styles.defaultHeader} center-in-page">
+        <p>${tagline || "default page tagline"}</p>
+        <h1>${label || "Defalult Page Header"}</h1>
+        
+    </header>
+`;
 
-const linkELm = link("Let's go", "/todo");
-linkELm.classList.add("ui-header-link");
-pageHeader.append(linkELm);
+ const header = makeElement(template)
+ if(children.length){
+    children.forEach(child=>{
+         header.append(child)
+    })
+ }
 
-return pageHeader;
+   
+  return header
+
+ 
+};
+
+export default pageHeader;

@@ -1,13 +1,5 @@
 import makeElement from "../../utils/makeElement";
 
-// "category": "friends",
-// "title":"Lunch with Ivan",
-// "isComplete": true,
-// "startDate": "saturday oct 30th",
-// "startTime": "12:00pm",
-// "endDate": "saturday oct 30th",
-// "endTime": "2:00pm"
-
 const toDoItem = function ({
   id,
   category,

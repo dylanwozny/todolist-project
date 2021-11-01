@@ -7,7 +7,7 @@ import header from "../components/ui/header";
 import tagLine from "../components/ui/tagline";
 
 // grab components fron landing page and add together
-const landingPage = function (params) {
+const landingPage = function () {
   const pageHeader = document.createElement("header");
 
   pageHeader.classList.add("page-header"); // add class to page header
