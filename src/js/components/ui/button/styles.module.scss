@@ -1,0 +1,22 @@
+// CAMEL CASE only
+// no dashes
+// this for only the button folder
+
+.uiButton {
+  background-color: #214a88;
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: none;
+  border-radius: 5px;
+  margin: 1rem 0.5rem;
+}
+
+button:hover {
+  background-color: #687fa1;
+  cursor: pointer;
+}
+
+.buttonWarning {
+  @extend .uiButton;
+  background-color: rgb(128, 67, 67);
+}

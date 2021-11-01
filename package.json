@@ -1,0 +1,32 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "Fewder is a simple Front End Framework for developing Web App's using modules",
+  "directories": {
+    "doc": "docs"
+  },
+  "default": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run static && npx parcel src/index.html",
+    "static": "npx gulp",
+    "dev": "",
+    "build": "npm run static && npx parcel build src/index.html",
+    "clean:dev": "rm -rf .parcel-cache dist",
+    "clean:git": "rm -rf .parcel-cache dist  node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "gulp": "^4.0.2",
+    "http-server": "^13.0.2",
+    "parcel": "^2.0.0-rc.0",
+    "sass": "^1.40.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
+  }
+}

@@ -1,0 +1,104 @@
+----Developer tools (dev-dependencies)---- 
+These tools are for development, they do not run in the browser in finished app
+
+Sass
+Parcel
+
+"npm install -D parcel sass http-server"
+
+
+
+----Modules for code (dependencies)-----
+Code/app actually uses these modules.
+
+lodash
+uuid
+
+"npm install uuid lodash"
+
+---Scripts---
+short cut to run commands
+You can put any commands here you want to run on the terminal
+
+clean: cleans out dev files if your getting errors. Clearing cache can sometimes fix it
+
+
+  "scripts": {
+    "test": "none",
+    "start": "npx parcel src/index.html",
+    "build": "npx parcel build src/index.html" <----- "npm run build",
+    "clean:dev": "rm -rf .parcel-cache dist",
+    "clean:git": "rm -rf .parcel-cache dist node_modules"
+  },
+
+ 
+
+-----Sass-----
+  Once you run parcel with a Sass file it will
+  download a Sass compiler
+
+  compile file
+  "cntrl + shift + p"
+
+  Jim is working on a fix for this, cant watch sass right now..
+
+
+---- NPM starting website -----
+    npm install (if first time)
+    npm run build
+    npm start
+
+
+
+  --- git ignore----
+
+  --- merge problems----
+
+  make current files a branch, then on github set the branch as the main branch !
+
+  ---commands for image problems and clearing cache------
+
+  svgo.config makes sure images show up
+
+  <--oct 4th 5mins in-->
+  HTTP is to test production build
+
+  npx http-server ./dist
+
+  then click server option
+
+----Making Components-----
+
+1 create folder name (header etc.)
+2 put file inside .js
+3 look at other components code for reference
+4 create sass partial and import in styles.scss
+5 import in index.js 
+6 create app. to make elements
+
+----svg ------
+
+put svg code into tempalte literal in icon/logo.js
+
+
+
+-----oct 4th------
+
+creating js functions to create html and a page.
+
+-----oct 7th-----
+routing
+
+
+
+-------Oct 21st------
+
+install GULP
+This will create dist folder from static data folder !
+
+1. npm install -D gulp
+2. always put gulpfile.js in root folder (this is the config file)
+3. file in gulp tasks in file
+4. npx gulp
+5. changed  run/build scripts in json config
+

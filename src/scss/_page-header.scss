@@ -1,0 +1,63 @@
+.center-in-page{
+    height:  60vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+   h1{
+       color:#275769;
+       font-size: 3rem;
+       line-height: 3rem;
+   }
+   p{
+    color:#395059;  
+    margin-bottom: 1rem;
+   }
+   a{
+       color:#527d8d;
+       box-shadow: 0 0 1px 1px rgba(39, 87, 105, 0.434);
+       padding: 0.5rem 1rem;
+       border-radius: 4px;
+       background-color: rgba(190, 203, 208, 0.25);
+   }
+}
+
+.page-not-found{
+   h1{
+       display:flex;
+       justify-content: space-between;
+       align-items: center;
+       gap:1rem;
+       color:rgba(78, 130, 150, 0.486);
+       font-size: 1.5rem;
+   }
+  span:nth-child(1){
+    color:#4e8da451;
+    font-size:3rem; 
+  }
+
+  span:nth-child(2){
+    color:#527d8d;
+    border-left:1px solid #527d8d67;
+    height: 48px;
+  }
+  a{
+      margin: 1rem 0 0;
+    color:#4c40bbe8;
+    text-decoration: underline;
+  }
+}
+
+.todo-page-header{
+    
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+ 
+
+ 
