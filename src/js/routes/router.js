@@ -1,6 +1,6 @@
 import landingPage from "../pages/home";
 import toDoPage from "../pages/toDo";
-import notFound from "../pages/notfound";
+import notFound from "../pages/notFound";
 import deletePage from "../pages/delete/deletePage";
 
 /* 
@@ -13,7 +13,7 @@ import deletePage from "../pages/delete/deletePage";
 const routes = {
   "/": landingPage,
   "/todo": toDoPage,
-  "/delete": deletePage
+  "/delete": deletePage,
 };
 // params that is page data......
 const Router = function (pathname, params = null) {
