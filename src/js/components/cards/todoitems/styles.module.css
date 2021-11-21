@@ -1,0 +1,32 @@
+.todo_card {
+  text-align: left;
+  margin-top: 6rem;
+  background-color: #f5f2f2;
+  padding: 1.5rem;
+  -webkit-box-shadow: 10px 10px 5px #aaaaaa;
+          box-shadow: 10px 10px 5px #aaaaaa;
+}
+.todo_card header {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+.todo_card h2 {
+  text-transform: capitalize;
+}
+.todo_card h3 {
+  color: #214a88;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.todo_card h4 {
+  font-style: italic;
+  font-weight: 800;
+}
+.todo_card span {
+  color: #65ade5;
+  font-size: 1.563rem;
+}
+.todo_card ul {
+  padding-left: 1rem;
+}
+/*# sourceMappingURL=styles.module.css.map */

@@ -1,14 +1,9 @@
-# Building Pages and Routing
+# To do List for Dylan Wozny
 
-# Please Download From Teams Files
+This is a javascript to do list application that can add, remove and edit list items.
 
-# WEEK 5 Class-2 page-routing-Start
- 
- 
- 
- 
+# Built for DMIT-2008 Assessment 1 and 2
 
- 
+Built for assessment for class. DMIT web development
 
-
- 
+# September to november 2021

@@ -1,4 +1,5 @@
-import makeElement from "../../utils/makeElement";
+import makeElement from "../../../utils/makeElement";
+import * as styles from "./styles.module.scss";
 
 const toDoItem = function ({
   id,
@@ -11,15 +12,17 @@ const toDoItem = function ({
   endTime,
 }) {
   const template = `       
-          <aside class="" data-key="${id}">
-          <div class="category">${category}</div>
+          <aside class="${styles.todo_card}" data-key="${id}">
+          
           <header>
             <div class="title">
+            
              <h2>${title}</h2>
+             <h3 class="">${category}</h3>
             </div>
 
              
-          <h3>${isComplete}</h3>
+          <h4>Is this item done: ${isComplete}</h4>
           </header>
           <ul>
              

@@ -101,4 +101,5 @@ This will create dist folder from static data folder !
 3. file in gulp tasks in file
 4. npx gulp
 5. changed  run/build scripts in json config
+6. run local server: "npm run start"
 

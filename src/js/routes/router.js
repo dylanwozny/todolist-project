@@ -1,7 +1,7 @@
-import landingPage from "../pages/home";
-import toDoPage from "../pages/toDo";
+import landingPage from "../pages/home/";
 import notFound from "../pages/notFound";
-import deletePage from "../pages/delete/deletePage";
+import deletePage from "../pages/delete/";
+import toDoList from "../pages/todolist/";
 
 /* 
      Route is a path to something .....file or function
@@ -12,8 +12,9 @@ import deletePage from "../pages/delete/deletePage";
 // Routing table
 const routes = {
   "/": landingPage,
-  "/todo": toDoPage,
+  "/todo": toDoList,
   "/delete": deletePage,
+  "/*notFound": notFound,
 };
 // params that is page data......
 const Router = function (pathname, params = null) {
@@ -26,7 +27,7 @@ const Router = function (pathname, params = null) {
   window.history.pushState({}, pathname, window.location.origin + pathname);
 
   // app.appendChild(routes[window.location.pathname]())
-  if (isValidRoute === undefined) {
+  if (isValidRoute === undefined || isValidRoute === "") {
     app.appendChild(notFound());
   } else {
     app.appendChild(routes[isValidRoute](params));
