@@ -22,7 +22,7 @@ const createPage = function () {
     startDate: "tuesday nov 30th",
     startTime: "2:00pm",
     endDate: "tuesday nov 30th",
-    endTime: "3:00pm",
+    endTime: "3:00pm"
   };
   //create new id
   newListItem.id = uuidv4().substr(0, 8);
