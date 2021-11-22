@@ -14,7 +14,7 @@ const static = function () {
 };
 
 function redirect() {
-  return src("./redirects").pipe(dest("./dist"));
+  return src("./_redirects").pipe(dest("./dist"));
 }
 
 exports.default = series(static, redirect);
