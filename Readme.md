@@ -4,6 +4,6 @@ This is a javascript to do list application that can add, remove and edit list i
 
 # Built for DMIT-2008 Assessment 1 and 2
 
-Built for assessment for class. DMIT web development
+Built for assessment for class DMIT web development.
 
-# September to november 2021
+# September to November 2021

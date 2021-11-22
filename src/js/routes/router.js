@@ -27,7 +27,7 @@ const Router = function (pathname, params = null) {
   window.history.pushState({}, pathname, window.location.origin + pathname);
 
   // app.appendChild(routes[window.location.pathname]())
-  if (isValidRoute === undefined || isValidRoute === "") {
+  if (isValidRoute === undefined) {
     app.appendChild(notFound());
   } else {
     app.appendChild(routes[isValidRoute](params));

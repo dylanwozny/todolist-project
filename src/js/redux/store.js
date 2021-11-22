@@ -5,7 +5,6 @@ let store = null;
 // Create the store accessed by all our app components
 function createStore(data = []) {
   if (store === null) {
-    //   [...] operator puts properties from object into new array
     store = [...data];
   }
   return null;
@@ -19,4 +18,4 @@ function updateStore(newStore) {
   store = [...newStore];
 }
 
-export { createStore, updateStore, getStore };
+export { createStore, getStore, updateStore };

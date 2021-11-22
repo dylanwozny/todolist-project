@@ -9,7 +9,7 @@ payload is the data for that action object
 */
 
 // manipulating the store
-import { getStore } from "./store";
+import { getStore, updateStore } from "./store";
 
 // {} is an object parameter
 function reducers(action) {
@@ -18,8 +18,13 @@ function reducers(action) {
     case "edit":
       return "edit employee";
     case "delete":
-      console.log(action.payload.id);
+      // grabing the current store
+      const store = getStore();
+      const index = action.payload.index;
+      const newStore = [...store.slice(0, index), ...store.slice(index + 1)];
+      updateStore(newStore);
       action.cb();
+      return "remove employee";
     case "add":
       return "create a new employee";
     default:
