@@ -9,12 +9,12 @@ import logo from "../../icons/logo";
 
 const createBody = function () {
   const template = `
-    <section id="todolist" class="${styles.todo_card}">
+    <section id="todolist" class="">
     <header class="todolist-header">
     ${logo()}
         <h2>Create a new List item</h2>
     </header>
-    <section id="todocreate" class="${styles.todo_create}">
+    <section id="todocreate" class="">
     <header class="">
     </header>
     </section>
