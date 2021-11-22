@@ -13,12 +13,18 @@ const toDoList = function () {
   function cleanUp() {
     const list = toDoContainer.querySelectorAll("aside");
     list.forEach((list) => {
-      list.removeEventListener("click", onDeleteTodo);
+      list.removeEventListener("click", onDeleteToDo);
     });
   }
 
+  // on create new
+  function oncreateToDo(e) {
+    cleanUp();
+    Router("/create");
+  }
+
   // Delete handler function
-  function onDeleteTodo(e) {
+  function onDeleteToDo(e) {
     // grabbing id
     const toDoId = e.currentTarget.parentElement.dataset.key;
     const listItem = getStore().filter((listItem) => listItem.id === toDoId);
@@ -28,13 +34,29 @@ const toDoList = function () {
     console.log(e.currentTarget.parentElement.dataset.key);
   }
 
+  // edit handler function
+  function onEditToDo(e) {
+    // grabbing id
+    const toDoId = e.currentTarget.parentElement.dataset.key;
+    const listItem = getStore().filter((listItem) => listItem.id === toDoId);
+    cleanUp();
+    Router("/edit", listItem[0]);
+
+    console.log(e.currentTarget.parentElement.dataset.key);
+  }
+
   function render() {
     const todolistings = getStore();
     const div = toDoContainer.querySelector("#todolist-items");
+    const createButton = toDoContainer.querySelector("#create");
+
+    createButton.addEventListener("click", oncreateToDo);
+
     // create li from the store data
     const listElements = getStore().map((td) => toDoItem(td));
     listElements.forEach((element) => {
-      element.querySelector("#delete").addEventListener("click", onDeleteTodo);
+      element.querySelector("#delete").addEventListener("click", onDeleteToDo);
+      element.querySelector("#edit").addEventListener("click", onEditToDo);
       div.append(element);
     });
     page.append(toDoContainer);

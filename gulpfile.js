@@ -5,15 +5,16 @@
 //Can use this on on local server if node installed and on netlify
 
 // -----COPY STATIC TO DIST------
-const { src, dest } = require("gulp");
+const { src, dest, series } = require("gulp");
 
-const static = function (cb) {
+const static = function () {
   // task
   // set src folder and move to destination
-  return src("src/static/data/*.*").pipe(dest("dist/data"));
-
-  //call the callback function
-  cb();
+  return src("src/static/**").pipe(dest("dist/data"));
 };
 
-exports.default = static;
+function redirect() {
+  return src("./redirects").pipe(dest("./dist"));
+}
+
+exports.default = series(static, redirect);

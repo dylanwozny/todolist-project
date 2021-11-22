@@ -9,7 +9,7 @@ payload is the data for that action object
 */
 
 // manipulating the store
-import { getStore, updateStore } from "./store";
+import { getStore, updateStore, createStore } from "./store";
 
 // {} is an object parameter
 function reducers(action) {

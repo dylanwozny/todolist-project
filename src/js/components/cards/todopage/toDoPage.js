@@ -9,6 +9,17 @@ const toDoBody = function () {
     ${logo()}
         <h2>To do list</h2>
     </header>
+    <section id="todocreate" class="${styles.todo_create}">
+    <header class="">
+        <h2>Create New To Do Item</h2>
+    </header>
+        <div id="todocreate-main">
+        <button id="create"  >Create New</button>
+        </div>
+    <footer>
+
+    </footer>
+</section>
         <div id="todolist-items">
         
         </div>

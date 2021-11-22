@@ -1,12 +1,12 @@
 // creating html with javascript
 
 import makeElement from "../../utils/makeElement";
-import pageHeaderButton from "../../components/ui/pageheader/";
+import pageHeader from "../../components/ui/pageheader/";
 import link from "../../components/ui/link/link";
 // import tagLine from "../../components/ui/tagline";
 
 // grab components fron landing page and add together
-const landingPage = function () {
+const editPage = function () {
   const page = document.createElement("div");
 
   // clean out page contents before building
@@ -14,8 +14,8 @@ const landingPage = function () {
 
   function render() {
     page.append(
-      pageHeaderButton({
-        label: "Dylan Wozny's to do List",
+      pageHeader({
+        label: "Edit this To Do item",
         tagline: "Gotta get it all done",
         children: [link("To Do List", "/todo")],
       })
@@ -27,4 +27,4 @@ const landingPage = function () {
   return page;
 };
 
-export default landingPage;
+export default editPage;
