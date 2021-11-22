@@ -10,7 +10,7 @@ const { src, dest, series } = require("gulp");
 const static = function () {
   // task
   // set src folder and move to destination
-  return src("src/static/**").pipe(dest("dist/data"));
+  return src("src/static/*.*").pipe(dest("dist/data"));
 };
 
 function redirect() {
