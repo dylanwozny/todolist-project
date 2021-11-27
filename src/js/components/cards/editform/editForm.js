@@ -12,7 +12,7 @@ const createBody = function () {
     <section id="todolist" class="${styles.create_header}">
     <header class="todolist-header">
     ${logo()}
-        <h2>Create a new List item</h2>
+        <h2>Edit a list item</h2>
     </header>
     <section id="todocreate" class="">
     <header class="">
